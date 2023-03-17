@@ -21,6 +21,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 180, unique: true)]
     private ?string $email = null;
 
+    #[ORM\Column(length: 180)]
+    private ?string $username = null;
+
     #[ORM\Column]
     private array $roles = [];
 
@@ -29,9 +32,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     #[ORM\Column]
     private ?string $password = null;
-
-    #[ORM\Column(type: 'boolean')]
-    private $isVerified = false;
 
     public function getId(): ?int
     {
@@ -103,15 +103,19 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         // $this->plainPassword = null;
     }
 
-    public function isVerified(): bool
+    /**
+     * @return string|null
+     */
+    public function getUsername(): ?string
     {
-        return $this->isVerified;
+        return $this->username;
     }
 
-    public function setIsVerified(bool $isVerified): self
+    /**
+     * @param string|null $username
+     */
+    public function setUsername(?string $username): void
     {
-        $this->isVerified = $isVerified;
-
-        return $this;
+        $this->username = $username;
     }
 }

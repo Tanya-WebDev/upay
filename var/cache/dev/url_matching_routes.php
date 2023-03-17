@@ -14,15 +14,17 @@ return [
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/xdebug' => [[['_route' => '_profiler_xdebug', '_controller' => 'web_profiler.controller.profiler::xdebugAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
+        '/api/registration' => [[['_route' => 'app_api_registration', '_controller' => 'App\\Controller\\ApiRegistrationController::index'], null, null, null, false, false, null]],
+        '/api/user-dashboard' => [[['_route' => 'app_api_user_dashboard', '_controller' => 'App\\Controller\\ApiUserDashboardController::index'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\LoginController::index'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'main', '_controller' => 'App\\Controller\\MyController::main'], null, null, null, false, false, null]],
         '/profile' => [[['_route' => 'profile', '_controller' => 'App\\Controller\\MyController::profile'], null, null, null, false, false, null]],
         '/admin/img' => [[['_route' => 'admin_img', '_controller' => 'App\\Controller\\MyController::adminImg'], null, null, null, false, false, null]],
         '/super-admin/img' => [[['_route' => 'super_admin_img', '_controller' => 'App\\Controller\\MyController::superAdminImg'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
-        '/verify/email' => [[['_route' => 'app_verify_email', '_controller' => 'App\\Controller\\RegistrationController::verifyUserEmail'], null, null, null, false, false, null]],
         '/privacy' => [[['_route' => 'privacy', 'template' => 'base.html.twig', '_controller' => 'Symfony\\Bundle\\FrameworkBundle\\Controller\\TemplateController'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout'], null, ['GET' => 0], null, false, false, null]],
+        '/api/login_check' => [[['_route' => 'api_login_check'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
